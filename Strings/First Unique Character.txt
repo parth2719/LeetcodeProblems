@@ -1,0 +1,32 @@
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        
+        d={}
+        num=-1
+        for i in range(len(s)):
+            if s[i] not in d:
+                d[s[i]]=1
+            else:
+                d[s[i]]+=1
+             
+        for i in range(len(s)):
+            if d[s[i]]==1:
+                num=i
+                break  
+        return max(-1, num)
+#or shorter lines:
+
+#class Solution:
+ #   def firstUniqChar(self, s: str) -> int:
+        
+#        d={}
+        
+       #     for ch in s:
+        #    d[ch]=d.get(ch, 0) + 1
+        
+        #for i in range(len(s)):
+         #   if d[s[i]] == 1:
+          #      return i
+        
+        #return -1
+    

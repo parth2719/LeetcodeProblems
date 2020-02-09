@@ -1,0 +1,32 @@
+from itertools import permutations 
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        
+            # Get lenghts of both strings 
+            n1 = len(s) 
+            n2 = len(t) 
+
+            # If length of both strings is not same, 
+            # then they cannot be Permutation 
+            if (n1 != n2): 
+                return False
+
+            # Sort both strings 
+            a = sorted(s) 
+            s = " ".join(a) 
+            b = sorted(t) 
+            t = " ".join(b) 
+
+            # Compare sorted strings 
+            for i in range(0, n1): 
+                if (s[i] != t[i]): 
+                    return False
+
+            return True
+         
+       
+ 
+
+        
+        
+        
